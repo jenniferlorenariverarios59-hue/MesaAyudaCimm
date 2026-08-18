@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.servicio;
 
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 
 import java.util.List;
 import java.util.Optional;

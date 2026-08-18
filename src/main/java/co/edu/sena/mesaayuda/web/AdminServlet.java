@@ -1,7 +1,7 @@
 package co.edu.sena.mesaayuda.web;
 
-import co.edu.sena.mesaayuda.dto.TicketDTO;
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.TicketDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.servicio.AuthService;
 import co.edu.sena.mesaayuda.servicio.TicketService;
 import co.edu.sena.mesaayuda.servicio.asignacion.AsignacionStrategy;

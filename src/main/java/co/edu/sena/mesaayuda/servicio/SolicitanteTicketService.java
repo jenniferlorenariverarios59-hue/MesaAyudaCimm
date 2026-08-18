@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.servicio;
 
-import co.edu.sena.mesaayuda.dto.TicketDTO;
+import co.edu.sena.mesaayuda.DTO.TicketDTO;
 
 import java.util.List;
 

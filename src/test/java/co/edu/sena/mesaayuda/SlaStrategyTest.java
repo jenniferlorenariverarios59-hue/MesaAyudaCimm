@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda;
 
-import co.edu.sena.mesaayuda.dto.SlaDTO;
+import co.edu.sena.mesaayuda.DTO.SlaDTO;
 import co.edu.sena.mesaayuda.modelo.Prioridad;
 import co.edu.sena.mesaayuda.servicio.sla.SelectorSlaStrategy;
 import co.edu.sena.mesaayuda.servicio.sla.SlaStrategy;

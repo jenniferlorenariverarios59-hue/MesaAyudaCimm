@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.web;
 
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.servicio.AuthService;
 
 import javax.servlet.ServletException;

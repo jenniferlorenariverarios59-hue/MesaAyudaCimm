@@ -1,4 +1,4 @@
-package co.edu.sena.mesaayuda.dto;
+package co.edu.sena.mesaayuda.DTO;
 
 import java.util.ArrayList;
 import java.util.List;

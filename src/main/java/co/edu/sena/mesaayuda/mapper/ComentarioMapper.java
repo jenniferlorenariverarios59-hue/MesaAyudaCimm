@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.mapper;
 
-import co.edu.sena.mesaayuda.dto.ComentarioDTO;
+import co.edu.sena.mesaayuda.DTO.ComentarioDTO;
 import co.edu.sena.mesaayuda.modelo.Comentario;
 
 import java.time.format.DateTimeFormatter;

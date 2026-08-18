@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.mapper;
 
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.modelo.Usuario;
 
 public class UsuarioMapper {

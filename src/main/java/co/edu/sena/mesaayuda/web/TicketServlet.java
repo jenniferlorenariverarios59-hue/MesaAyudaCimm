@@ -1,7 +1,7 @@
 package co.edu.sena.mesaayuda.web;
 
-import co.edu.sena.mesaayuda.dto.TicketDTO;
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.TicketDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.modelo.Categoria;
 import co.edu.sena.mesaayuda.modelo.estado.TransicionEstadoInvalidaException;
 import co.edu.sena.mesaayuda.servicio.TicketService;

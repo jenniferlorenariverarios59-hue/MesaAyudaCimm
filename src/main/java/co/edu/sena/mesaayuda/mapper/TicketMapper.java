@@ -1,8 +1,8 @@
 package co.edu.sena.mesaayuda.mapper;
 
-import co.edu.sena.mesaayuda.dto.ComentarioDTO;
-import co.edu.sena.mesaayuda.dto.SlaDTO;
-import co.edu.sena.mesaayuda.dto.TicketDTO;
+import co.edu.sena.mesaayuda.DTO.ComentarioDTO;
+import co.edu.sena.mesaayuda.DTO.SlaDTO;
+import co.edu.sena.mesaayuda.DTO.TicketDTO;
 import co.edu.sena.mesaayuda.modelo.Ticket;
 import co.edu.sena.mesaayuda.modelo.estado.EstadoTicket;
 import co.edu.sena.mesaayuda.modelo.estado.TransicionEstadoInvalidaException;

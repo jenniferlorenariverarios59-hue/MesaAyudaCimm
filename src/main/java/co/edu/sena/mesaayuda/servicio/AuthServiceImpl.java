@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.servicio;
 
-import co.edu.sena.mesaayuda.dto.UsuarioDTO;
+import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.mapper.UsuarioMapper;
 import co.edu.sena.mesaayuda.modelo.Rol;
 import co.edu.sena.mesaayuda.modelo.Usuario;

@@ -1,4 +1,4 @@
-package co.edu.sena.mesaayuda.dto;
+package co.edu.sena.mesaayuda.DTO;
 
 public class SlaDTO {
     private int horasMaximas;

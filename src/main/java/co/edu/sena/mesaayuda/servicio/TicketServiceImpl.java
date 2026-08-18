@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.servicio;
 
-import co.edu.sena.mesaayuda.dto.TicketDTO;
+import co.edu.sena.mesaayuda.DTO.TicketDTO;
 import co.edu.sena.mesaayuda.mapper.TicketMapper;
 import co.edu.sena.mesaayuda.modelo.Categoria;
 import co.edu.sena.mesaayuda.modelo.Comentario;
@@ -15,7 +15,6 @@ import co.edu.sena.mesaayuda.servicio.notificacion.Notificador;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 

@@ -1,6 +1,6 @@
 package co.edu.sena.mesaayuda.servicio.sla;
 
-import co.edu.sena.mesaayuda.dto.SlaDTO;
+import co.edu.sena.mesaayuda.DTO.SlaDTO;
 
 import java.time.LocalDateTime;
 
