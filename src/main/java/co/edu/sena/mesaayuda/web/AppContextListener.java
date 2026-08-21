@@ -36,6 +36,8 @@ public class AppContextListener implements ServletContextListener {
     public static final String AUTH_SERVICE = "authService";
     public static final String TICKET_SERVICE = "ticketService";
     public static final String NOTIFICADOR_SERVICE = "notificadorService";
+    public static final String APP_NOTIFICADOR = "appNotificador";
+
 
     @Override
     public void contextInitialized(ServletContextEvent event) {
@@ -49,11 +51,14 @@ public class AppContextListener implements ServletContextListener {
         AsignacionStrategy asignacionStrategy = new TurnoRotativoStrategy();
 
         // 3. Sistema de Notificaciones con patrón Composite (OCP)
+        AppNotificador appNotificador = new AppNotificador();
+
         Notificador notificador = new MultiNotificador(List.of(
                 new EmailNotificador(),
                 new SmsNotificador(),
-                new AppNotificador()
+                appNotificador
         ));
+
 
         // 4. Servicios con inyección de dependencias por constructor (DIP / SRP)
         AuthService authService = new AuthServiceImpl(usuarioRepository);
@@ -68,6 +73,8 @@ public class AppContextListener implements ServletContextListener {
         contexto.setAttribute(AUTH_SERVICE, authService);
         contexto.setAttribute(TICKET_SERVICE, ticketService);
         contexto.setAttribute(NOTIFICADOR_SERVICE, notificador);
+        contexto.setAttribute(APP_NOTIFICADOR, appNotificador);
+
 
         System.out.println(">>> AppContextListener: Mesa de Ayuda CIMM inicializada correctamente.");
     }

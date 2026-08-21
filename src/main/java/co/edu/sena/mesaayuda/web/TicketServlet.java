@@ -5,6 +5,7 @@ import co.edu.sena.mesaayuda.DTO.UsuarioDTO;
 import co.edu.sena.mesaayuda.modelo.Categoria;
 import co.edu.sena.mesaayuda.modelo.estado.TransicionEstadoInvalidaException;
 import co.edu.sena.mesaayuda.servicio.TicketService;
+import co.edu.sena.mesaayuda.servicio.notificacion.AppNotificador;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +31,15 @@ public class TicketServlet extends HttpServlet {
         }
 
         UsuarioDTO usuario = usuarioOpt.get();
-        TicketService ticketService = (TicketService) getServletContext().getAttribute(AppContextListener.TICKET_SERVICE);
+
+        TicketService ticketService =
+                (TicketService) getServletContext()
+                        .getAttribute(AppContextListener.TICKET_SERVICE);
+
+        AppNotificador appNotificador =
+                (AppNotificador) getServletContext()
+                        .getAttribute(AppContextListener.APP_NOTIFICADOR);
+
 
         String path = request.getServletPath();
 
@@ -88,7 +97,16 @@ public class TicketServlet extends HttpServlet {
                 request.setAttribute("categorias", Categoria.values());
                 request.setAttribute("filtroEstado", filtroEstado);
                 request.setAttribute("filtroCategoria", filtroCategoria);
-                request.getRequestDispatcher("/WEB-INF/jsp/tickets.jsp").forward(request, response);
+
+                request.setAttribute(
+                        "notificaciones",
+                        appNotificador.getHistorialNotificaciones(usuario.getId())
+                );
+
+
+                request.getRequestDispatcher("/WEB-INF/jsp/tickets.jsp")
+                        .forward(request, response);
+
                 break;
         }
     }

@@ -15,6 +15,43 @@
         🟢 Mesa de Ayuda <span>CIMM</span>
     </a>
     <div class="navbar-user">
+
+        <!-- Notificaciones -->
+        <div class="notificaciones">
+
+            <button type="button" class="btn-notificaciones" onclick="mostrarNotificaciones()">
+                🔔
+                <span id="contadorNotificaciones">
+                    ${empty notificaciones ? 0 : notificaciones.size()}
+                </span>
+            </button>
+
+            <div id="listaNotificaciones" class="lista-notificaciones">
+
+                <c:choose>
+
+                    <c:when test="${empty notificaciones}">
+                        <div class="notificacion-vacia">
+                            No tienes notificaciones.
+                        </div>
+                    </c:when>
+
+                    <c:otherwise>
+
+                        <c:forEach var="notificacion" items="${notificaciones}">
+                            <div class="notificacion">
+                                🔔 ${notificacion}
+                            </div>
+                        </c:forEach>
+
+                    </c:otherwise>
+
+                </c:choose>
+
+            </div>
+
+        </div>
+
         <span>Bienvenido, <strong>${usuarioLogueado.nombre}</strong></span>
         <span class="user-badge">${usuarioLogueado.nombreRol}</span>
         <c:if test="${usuarioLogueado.rol == 'ADMINISTRADOR'}">
@@ -153,6 +190,17 @@
 <footer>
     Mesa de Ayuda CIMM - SENA Regional Boyacá | Aplicación construida con Servlets y Patrones SOLID
 </footer>
+<script>
+    function mostrarNotificaciones() {
+        const lista = document.getElementById("listaNotificaciones");
+
+        if (lista.style.display === "block") {
+            lista.style.display = "none";
+        } else {
+            lista.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>

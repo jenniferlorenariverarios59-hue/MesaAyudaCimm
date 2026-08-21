@@ -431,3 +431,126 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: auto;
 }
+
+/* ==========================================================
+   NOTIFICACIONES
+   ========================================================== */
+
+.notificaciones {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón de la campana */
+.btn-notificaciones {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.btn-notificaciones:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Número de notificaciones */
+.contador-notificaciones {
+    position: absolute;
+
+    top: -2px;
+    right: -2px;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ef4444;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Lista desplegable */
+.lista-notificaciones {
+    display: none;
+
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 360px;
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+}
+
+/* Cada notificación */
+.notificacion {
+    display: block;
+
+    padding: 14px 16px;
+
+    background-color: #ffffff;
+    color: #334155;
+
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Última notificación */
+.notificacion:last-child {
+    border-bottom: none;
+}
+
+/* Al pasar el mouse */
+.notificacion:hover {
+    background-color: #f8fafc;
+}
+
+/* Cuando no existen notificaciones */
+.notificacion-vacia {
+    padding: 20px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 0.85rem;
+}
+
